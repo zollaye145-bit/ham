@@ -1,21 +1,20 @@
 # Hamza Oubaida — Portfolio
 
-Site vitrine responsive (desktop + mobile) pour Hamza Oubaida, expert GoHighLevel.
+Carte de visite web professionnelle, responsive (desktop + mobile) pour Hamza Oubaida, expert GoHighLevel.
 HTML + CSS pur, aucune dépendance, aucun build.
 
 ## Fichiers
 
 - `index.html` — la page
-- `styles.css` — tout le style (palette en variables CSS en haut du fichier)
+- Le style est dans `index.html` (variables CSS en haut, mode clair et sombre)
 - `images/` — screenshots des projets
 
 ## À compléter
 
 1. **Screenshots** — mettre les images dans `images/` avec ces noms :
-   `service-funnel.png`, `wellness-funnel.png`, `agency-funnel.png`,
-   `courses-funnel.png`, `vsl-funnel.png`, `saas-funnel.png`.
+   `service-funnel.png`, `agency-funnel.png`, `saas-funnel.png`.
    Tant qu'une image manque, la carte affiche un placeholder propre.
-2. **Témoignages** — remplacer les `[Paste … testimonial here]` dans `index.html`.
+2. **Témoignages** — remplacer les `[Client testimonial]` dans `index.html`.
 
 ## Déploiement
 

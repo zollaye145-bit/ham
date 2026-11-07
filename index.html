@@ -2,182 +2,312 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hamza Oubaida | GoHighLevel Expert</title>
-<meta name="description" content="I build GoHighLevel systems that close, follow up, and scale — funnels, CRMs, pipelines and automations for agencies and service businesses.">
-<meta property="og:title" content="Hamza Oubaida | GoHighLevel Expert">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hamza Oubaida</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Hamza Oubaida — GoHighLevel systems architect. Funnels, CRM, pipelines and automation for agencies and service businesses.">
+<meta property="og:title" content="Hamza Oubaida — GoHighLevel Systems Architect">
 <meta property="og:description" content="I build systems that close, follow up, and scale.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#1C1347">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a business card at the top, then a quiet single-column dossier — ruled sections, label column on the left, content on the right. */
+:root {
+  --bg: #F4F5F7;
+  --surface: #FFFFFF;
+  --fg: #0F1726;
+  --muted: #535D6D;
+  --line: #DCE0E6;
+  --accent: #86643A;
+  --band: #0F1726;
+  --band-fg: #EEF0F3;
+  --band-muted: #A3ACBA;
+
+  --display: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --body: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1019; --surface: #121927; --fg: #E9ECF1; --muted: #9EA7B5;
+    --line: #253043; --accent: #C8A472; --band: #070B12; --band-fg: #E9ECF1; --band-muted: #8E98A8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1019; --surface: #121927; --fg: #E9ECF1; --muted: #9EA7B5;
+  --line: #253043; --accent: #C8A472; --band: #070B12; --band-fg: #E9ECF1; --band-muted: #8E98A8;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 16px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+h1, h2, h3, p { margin: 0; }
+h1, h2 { font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.wrap {
+  max-width: 1080px; margin: 0 auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+.label {
+  font-family: var(--mono); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+}
+
+/* Header */
+.top { padding-block: 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.mark { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 600; font-size: 15px; }
+.mono {
+  width: 38px; height: 38px; border: 1px solid var(--fg); border-radius: 50%;
+  display: grid; place-items: center; font-family: var(--display); font-size: 17px; font-weight: 600;
+}
+.top nav { display: flex; align-items: center; gap: 28px; font-size: 14px; }
+.top nav a:not(.btn) { text-decoration: none; color: var(--muted); }
+.top nav a:not(.btn):hover { color: var(--fg); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 46px; padding: 0 22px; border-radius: 4px;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  border: 1px solid var(--fg); transition: background-color .15s, color .15s;
+}
+.btn-solid { background: var(--fg); color: var(--bg); }
+.btn-solid:hover { background: transparent; color: var(--fg); }
+.btn-line { color: var(--fg); }
+.btn-line:hover { background: var(--fg); color: var(--bg); }
+
+/* Business card hero */
+.hero { padding-block: 48px 88px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  box-shadow: 0 1px 2px rgba(15,23,38,.04), 0 24px 48px -24px rgba(15,23,38,.18);
+}
+.card-main { padding: clamp(32px, 5vw, 64px); display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.card-main h1 { font-size: clamp(48px, 7vw, 84px); line-height: 0.98; }
+.role { font-size: 18px; color: var(--muted); }
+.thesis { font-family: var(--display); font-size: clamp(24px, 2.6vw, 30px); line-height: 1.25; font-weight: 500; max-width: 26ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 6px; }
+.card-side {
+  border-left: 1px solid var(--line); padding: clamp(28px, 4vw, 48px);
+  display: flex; flex-direction: column; justify-content: space-between; gap: 32px; min-width: 0;
+}
+.status { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: #2E8B57; }
+.contact { display: flex; flex-direction: column; margin: 0; }
+.contact div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; padding-block: 14px; border-top: 1px solid var(--line); }
+.contact dt { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 2px; }
+.contact dd { margin: 0; font-size: 15px; font-weight: 500; overflow-wrap: anywhere; }
+.contact a { text-decoration-color: var(--line); text-underline-offset: 3px; }
+.contact a:hover { text-decoration-color: var(--accent); }
+.figures { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.figures div { display: flex; flex-direction: column; }
+.figures b { font-family: var(--display); font-size: 34px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.figures span { font-size: 13px; color: var(--muted); }
+
+/* Dossier sections */
+.section { border-top: 1px solid var(--line); padding-block: clamp(56px, 8vw, 96px); display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px 48px; }
+.section-body { display: flex; flex-direction: column; gap: 36px; min-width: 0; }
+.section h2 { font-size: clamp(34px, 4vw, 46px); line-height: 1.08; max-width: 22ch; }
+
+.services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.services div { padding-block: 22px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+.services h3 { font-size: 17px; font-weight: 600; }
+.services p { font-size: 15px; color: var(--muted); max-width: 42ch; }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; counter-reset: s; }
+.steps li { counter-increment: s; display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--fg); }
+.steps li::before { content: "Step " counter(s); font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.steps h3 { font-size: 17px; font-weight: 600; }
+.steps p { font-size: 15px; color: var(--muted); }
+
+.clients { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 14px 36px; font-family: var(--display); font-size: 24px; font-weight: 500; color: var(--muted); }
+
+.work { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.work a { text-decoration: none; display: flex; flex-direction: column; gap: 12px; }
+.shot { aspect-ratio: 4 / 3; max-width: 100%; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); overflow: hidden; display: grid; place-items: center; }
+.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.shot.empty::after { content: "Screenshot"; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.work h3 { font-size: 16px; font-weight: 600; }
+.work span { font-size: 14px; color: var(--muted); }
+.more { font-size: 15px; font-weight: 600; text-underline-offset: 4px; }
+
+.quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.quotes figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; }
+.quotes blockquote { margin: 0; font-family: var(--display); font-size: 23px; line-height: 1.35; font-weight: 500; }
+.quotes figcaption { display: flex; flex-direction: column; font-size: 14px; color: var(--muted); }
+.quotes figcaption b { color: var(--fg); font-size: 15px; font-weight: 600; }
+
+/* Closing band */
+.band { background: var(--band); color: var(--band-fg); }
+.band-inner { padding-block: clamp(64px, 9vw, 104px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; }
+.band h2 { font-size: clamp(38px, 5vw, 58px); line-height: 1.04; max-width: 16ch; }
+.band p { color: var(--band-muted); max-width: 46ch; margin-top: 16px; }
+.band .btn { border-color: var(--band-fg); }
+.band .btn-solid { background: var(--band-fg); color: var(--band); }
+.band .btn-solid:hover { background: transparent; color: var(--band-fg); }
+.band .btn-line { color: var(--band-fg); }
+.band .btn-line:hover { background: var(--band-fg); color: var(--band); }
+.foot { padding-block: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--band-muted); border-top: 1px solid rgba(255,255,255,.08); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .card { grid-template-columns: 1fr; }
+  .card-side { border-left: 0; border-top: 1px solid var(--line); }
+  .section { grid-template-columns: 1fr; gap: 20px; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .work { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .top nav a:not(.btn) { display: none; }
+  .top .btn { min-height: 44px; padding: 0 16px; font-size: 14px; }
+  .hero { padding-block: 16px 56px; }
+  .actions .btn { flex: 1 1 100%; }
+  .services, .steps, .work, .quotes { grid-template-columns: 1fr; }
+  .clients { font-size: 21px; gap: 10px 24px; }
+  .quotes figure { padding: 24px; }
+  .quotes blockquote { font-size: 21px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
 </head>
 <body>
 
-<!-- ============ HERO ============ -->
-<header class="hero" id="top">
-  <nav class="nav wrap">
-    <a href="#top" class="logo">hamza<span>.</span>oubaida</a>
-    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 9h14M5 15h14"/></svg>
-    </button>
-    <div class="menu" id="menu">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#work">Work</a>
-      <a href="#reviews">Reviews</a>
-      <a href="https://hamzaoubaida.com/booking-page" class="btn btn-lime">Book a call →</a>
-    </div>
+<header class="wrap top">
+  <a class="mark" href="#top"><span class="mono">HO</span>Hamza Oubaida</a>
+  <nav aria-label="Main">
+    <a href="#services">Services</a>
+    <a href="#approach">Approach</a>
+    <a href="#work">Work</a>
+    <a class="btn btn-solid" href="https://hamzaoubaida.com/booking-page">Book a call</a>
   </nav>
-
-  <div class="hero-grid wrap">
-    <div class="hero-copy">
-      <span class="pill"><i class="dot"></i>Available for new projects · GHL Expert</span>
-      <h1>Systems that <mark>close</mark>, follow&nbsp;up &amp; <em>scale.</em></h1>
-      <p class="lead">I'm Hamza — RevOps &amp; automation architect. I build end-to-end GoHighLevel machines for agencies and service businesses that run 24/7 while you sleep.</p>
-      <div class="actions">
-        <a href="https://hamzaoubaida.com/booking-page" class="btn btn-orange btn-lg">Book a free call →</a>
-        <a href="https://hamzaoubaida.com/my-work" class="btn btn-ghost-light btn-lg">See my work</a>
-      </div>
-    </div>
-
-    <div class="collage" aria-hidden="true">
-      <div class="card card-pipeline">
-        <div class="row-between"><strong class="card-title">Sales pipeline</strong><span class="tag tag-live">LIVE</span></div>
-        <div class="stages">
-          <div><span class="stage">NEW LEAD</span><div class="deal deal-violet">Agency A<small>$2,400/mo</small></div><div class="deal deal-violet hide-sm">Studio X<small>$4,500/mo</small></div></div>
-          <div><span class="stage">PROPOSAL</span><div class="deal deal-peach">MedGroup<small>$6,000/mo</small></div></div>
-          <div><span class="stage">CLOSED</span><div class="deal deal-lime">TechStart ✓<small>$5,500/mo</small></div><div class="deal deal-lime hide-sm">RetailCo ✓<small>$3,800/mo</small></div></div>
-        </div>
-      </div>
-      <div class="card card-follow">
-        <strong class="card-title">Auto follow-up</strong>
-        <div class="line"><span>SMS — Day 0</span><b>sent</b></div>
-        <div class="line hide-sm"><span>Email — Day 2</span><b>opened</b></div>
-        <div class="line"><span>Call — Day 5</span><b class="tag tag-dark">booked</b></div>
-      </div>
-      <div class="card card-review">
-        <span class="big">4.9★</span>
-        <span>Auto-requested<br>Google reviews</span>
-      </div>
-    </div>
-  </div>
 </header>
 
-<!-- ============ STATS ============ -->
-<section class="stats">
-  <div class="wrap stats-inner">
-    <div class="numbers">
-      <div><b>50+</b><span>systems built</span></div>
-      <div><b>120+</b><span>agencies served</span></div>
-      <div><b>6+</b><span>industries</span></div>
+<main id="top">
+  <section class="wrap hero">
+    <div class="card">
+      <div class="card-main">
+        <span class="label">GoHighLevel · RevOps · Automation</span>
+        <h1>Hamza Oubaida</h1>
+        <p class="role">Systems &amp; Automation Architect, GHL Certified</p>
+        <p class="thesis">I build sales systems that close, follow up and scale, for agencies and service businesses.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="https://hamzaoubaida.com/booking-page">Book a 30-minute call</a>
+          <a class="btn btn-line" href="https://hamzaoubaida.com/my-work">View my work</a>
+        </div>
+      </div>
+      <aside class="card-side" aria-label="Contact details">
+        <span class="status"><i aria-hidden="true"></i>Taking new projects</span>
+        <dl class="contact">
+          <div><dt>Web</dt><dd><a href="https://hamzaoubaida.com">hamzaoubaida.com</a></dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/hamzaoubaida/">in/hamzaoubaida</a></dd></div>
+          <div><dt>Booking</dt><dd><a href="https://hamzaoubaida.com/booking-page">hamzaoubaida.com/booking</a></dd></div>
+          <div><dt>Platform</dt><dd>GoHighLevel, 100% native</dd></div>
+        </dl>
+        <div class="figures">
+          <div><b>50+</b><span>systems built</span></div>
+          <div><b>120+</b><span>agencies served</span></div>
+          <div><b>6+</b><span>industries</span></div>
+        </div>
+      </aside>
     </div>
-    <ul class="clients" aria-label="Clients">
-      <li>Inspired Media</li><li>CoreVision</li><li>TopTech</li><li>DGA Intl</li><li>Iron Lion</li><li>nuDoors</li><li>Pawtastic</li><li>XGolf</li><li>Digital Arkitechs</li>
-    </ul>
-  </div>
-</section>
+  </section>
 
-<!-- ============ SERVICES ============ -->
-<section class="section wrap" id="services">
-  <div class="section-head">
-    <h2>Everything your business needs. <em>Inside GHL.</em></h2>
-    <p>Six systems, one platform, zero duct tape.</p>
-  </div>
-  <div class="bento">
-    <article class="tile t-ink"><span class="kicker c-lime">01 / FUNNELS</span><div><h3>Funnels &amp; landing pages</h3><p>High-converting pages that capture leads and push prospects to act — built natively in GoHighLevel.</p></div></article>
-    <article class="tile t-orange"><span class="kicker">02 / CRM</span><div><h3>CRM &amp; pipelines</h3><p>Your exact sales process, every deal tracked.</p></div></article>
-    <article class="tile t-lime"><span class="kicker">03 / AUTOMATION</span><div><h3>Automation workflows</h3><p>Right message, right moment, on autopilot.</p></div></article>
-    <article class="tile t-violet"><span class="kicker">04 / BOOKING</span><div><h3>Appointment booking</h3><p>Reminders &amp; no-show recovery. The calendar fills itself.</p></div></article>
-    <article class="tile t-outline"><span class="kicker">05 / ONBOARDING</span><div><h3>Client onboarding</h3><p>Intake, welcome sequences, tasks — wow from day one.</p></div></article>
-    <article class="tile t-ink"><span class="kicker c-orange">06 / MEMBERSHIP</span><div><h3>Membership platforms</h3><p>Courses &amp; client portals, no third-party tools.</p></div></article>
-  </div>
-</section>
+  <div class="wrap">
+    <section class="section" id="services">
+      <span class="label">Services</span>
+      <div class="section-body">
+        <h2>Every system your business needs, built inside GoHighLevel.</h2>
+        <div class="services">
+          <div><h3>Funnels &amp; landing pages</h3><p>Pages that capture leads and guide prospects to book.</p></div>
+          <div><h3>CRM &amp; pipelines</h3><p>Pipelines mapped to your sales process, with every deal tracked.</p></div>
+          <div><h3>Automation workflows</h3><p>Multi-step follow-up and nurture that runs without your team.</p></div>
+          <div><h3>Appointment booking</h3><p>Confirmations, reminders and no-show recovery.</p></div>
+          <div><h3>Client onboarding</h3><p>Intake forms, welcome sequences and task automation.</p></div>
+          <div><h3>Membership platforms</h3><p>Courses and client portals with no third-party tools.</p></div>
+        </div>
+      </div>
+    </section>
 
-<!-- ============ PROCESS ============ -->
-<section class="process" id="process">
-  <div class="section wrap">
-    <div class="section-head"><h2>Built for growth, not just setup.</h2></div>
-    <ol class="steps">
-      <li><span class="num">01</span><h3>Capture</h3><p>Ads, forms and pages funnel every prospect into your pipeline.</p></li>
-      <li><span class="num">02</span><h3>Follow up</h3><p>SMS, email &amp; voicemail that keep leads warm until they buy.</p></li>
-      <li><span class="num">03</span><h3>Close</h3><p>Stage logic and deal routing — no lead slips through.</p></li>
-      <li class="dark"><span class="num">04</span><h3>Get reviewed</h3><p>Happy clients turn into 5-star Google reviews, automatically.</p></li>
-    </ol>
-  </div>
-</section>
+    <section class="section" id="approach">
+      <span class="label">Approach</span>
+      <div class="section-body">
+        <h2>Built for growth, not just setup.</h2>
+        <ol class="steps">
+          <li><h3>Lead capture</h3><p>Ads, forms and pages route every prospect into your pipeline.</p></li>
+          <li><h3>Follow-up</h3><p>SMS, email and voicemail sequences keep leads warm.</p></li>
+          <li><h3>Pipeline</h3><p>Stage logic and deal routing so no lead is lost.</p></li>
+          <li><h3>Reviews</h3><p>Automatic review requests that build your Google rating.</p></li>
+        </ol>
+      </div>
+    </section>
 
-<!-- ============ WORK ============ -->
-<section class="section wrap" id="work">
-  <div class="section-head">
-    <h2>Every build custom.</h2>
-    <a href="https://hamzaoubaida.com/my-work" class="btn btn-ink">All projects →</a>
-  </div>
-  <div class="work">
-    <a class="project p-violet" href="https://hamzaoubaida.com/my-work"><div class="shot"><img src="images/service-funnel.png" alt="Service funnel" loading="lazy"></div><div class="row-between"><h3>Service funnel</h3><span class="tag">LEAD GEN</span></div></a>
-    <a class="project p-lime" href="https://hamzaoubaida.com/my-work"><div class="shot"><img src="images/wellness-funnel.png" alt="Wellness funnel" loading="lazy"></div><div class="row-between"><h3>Wellness funnel</h3><span class="tag">BOOKING</span></div></a>
-    <a class="project p-peach" href="https://hamzaoubaida.com/my-work"><div class="shot"><img src="images/agency-funnel.png" alt="Agency funnel" loading="lazy"></div><div class="row-between"><h3>Agency funnel</h3><span class="tag">CRM</span></div></a>
-    <a class="project p-ink" href="https://hamzaoubaida.com/my-work"><div class="shot"><img src="images/courses-funnel.png" alt="Courses funnel" loading="lazy"></div><div class="row-between"><h3>Courses funnel</h3><span class="tag tag-lime">MEMBERSHIP</span></div></a>
-    <a class="project p-orange" href="https://hamzaoubaida.com/my-work"><div class="shot"><img src="images/vsl-funnel.png" alt="VSL funnel" loading="lazy"></div><div class="row-between"><h3>VSL funnel</h3><span class="tag">SALES</span></div></a>
-    <a class="project p-violet" href="https://hamzaoubaida.com/my-work"><div class="shot"><img src="images/saas-funnel.png" alt="SaaS funnel" loading="lazy"></div><div class="row-between"><h3>SaaS funnel</h3><span class="tag">ONBOARDING</span></div></a>
-  </div>
-</section>
+    <section class="section" id="clients">
+      <span class="label">Clients</span>
+      <div class="section-body">
+        <h2>Trusted by agencies, coaches, SaaS and service businesses.</h2>
+        <ul class="clients">
+          <li>Inspired Media</li><li>CoreVision</li><li>TopTech</li><li>DGA Intl</li><li>Iron Lion</li><li>nuDoors</li><li>Pawtastic</li><li>Varela</li><li>XGolf</li><li>Digital Arkitechs</li>
+        </ul>
+      </div>
+    </section>
 
-<!-- ============ REVIEWS ============ -->
-<section class="reviews" id="reviews">
-  <div class="section wrap">
-    <div class="section-head"><h2>Real results. <em class="c-lime">Real clients.</em></h2></div>
-    <div class="quotes">
-      <figure class="q-lime"><span class="stars">★★★★★</span><blockquote>[Paste Corey's testimonial here]</blockquote><figcaption><b>Corey P.</b><span>Owner, CoreVision Marketing</span></figcaption></figure>
-      <figure class="q-cream"><span class="stars c-orange">★★★★★</span><blockquote>[Paste Angela's testimonial here]</blockquote><figcaption><b>Angela Dodson</b><span>Co-founder, R&amp;D</span></figcaption></figure>
-      <figure class="q-orange"><span class="stars">★★★★★</span><blockquote>[Paste Eddine's testimonial here]</blockquote><figcaption><b>Eddine T.</b><span>Coach &amp; consultant, BP Closing</span></figcaption></figure>
+    <section class="section" id="work">
+      <span class="label">Selected work</span>
+      <div class="section-body">
+        <h2>Every build custom. Every workflow intentional.</h2>
+        <div class="work">
+          <a href="https://hamzaoubaida.com/my-work"><div class="shot"><img src="images/service-funnel.png" alt="Service funnel" loading="lazy"></div><h3>Service funnel</h3><span>Lead generation</span></a>
+          <a href="https://hamzaoubaida.com/my-work"><div class="shot"><img src="images/agency-funnel.png" alt="Agency funnel" loading="lazy"></div><h3>Agency funnel</h3><span>CRM &amp; pipeline</span></a>
+          <a href="https://hamzaoubaida.com/my-work"><div class="shot"><img src="images/saas-funnel.png" alt="SaaS funnel" loading="lazy"></div><h3>SaaS funnel</h3><span>Onboarding</span></a>
+        </div>
+        <a class="more" href="https://hamzaoubaida.com/my-work">See all projects →</a>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <span class="label">Testimonials</span>
+      <div class="section-body">
+        <div class="quotes">
+          <figure><blockquote>[Client testimonial]</blockquote><figcaption><b>Corey P.</b>Owner, CoreVision Marketing</figcaption></figure>
+          <figure><blockquote>[Client testimonial]</blockquote><figcaption><b>Eddine T.</b>Coach &amp; consultant, BP Closing</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <div class="band-inner">
+      <div>
+        <h2>Ready to build your GoHighLevel system?</h2>
+        <p>One clean, scalable system that works while you sleep. Start with a short call.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-solid" href="https://hamzaoubaida.com/booking-page">Book a call</a>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/hamzaoubaida/">LinkedIn</a>
+      </div>
     </div>
-    <p class="also">Also trusted by <b>Anthony O.</b> (O. Academy) · <b>Kathryn Rutti</b> (AGS) · <b>Naum S.</b></p>
-  </div>
-</section>
-
-<!-- ============ CTA ============ -->
-<section class="cta">
-  <div class="wrap cta-inner">
-    <h2>Let's build<br>your machine.</h2>
-    <p>Stop duct-taping tools together. One clean, scalable GoHighLevel system that works while you sleep.</p>
-    <div class="actions">
-      <a href="https://hamzaoubaida.com/booking-page" class="btn btn-ink btn-xl">Book a free call →</a>
-      <a href="https://www.linkedin.com/in/hamzaoubaida/" class="btn btn-ghost-dark btn-xl">LinkedIn</a>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <span class="logo">hamza<span>.</span>oubaida</span>
-    <span>© <span id="year">2026</span> Hamza Oubaida · GoHighLevel Expert</span>
+    <div class="foot"><span>© 2026 Hamza Oubaida</span><span>GoHighLevel Systems Architect</span></div>
   </div>
 </footer>
 
 <script>
-  (function () {
-    var btn = document.querySelector('.burger');
-    var menu = document.getElementById('menu');
-    btn.addEventListener('click', function () {
-      var open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open);
-      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    });
-    menu.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        menu.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Hide broken screenshots gracefully until real images are added
-    document.querySelectorAll('.shot img').forEach(function (img) {
-      img.addEventListener('error', function () { img.parentNode.classList.add('empty'); img.remove(); });
-    });
-  })();
+  document.querySelectorAll('.shot img').forEach(function (img) {
+    function empty() { img.parentNode.classList.add('empty'); img.remove(); }
+    if (img.complete && img.naturalWidth === 0) empty(); else img.addEventListener('error', empty);
+  });
 </script>
 </body>
 </html>
